@@ -19,6 +19,47 @@ The NikNak Collective aims to create an inclusive, user-driven platform where in
 
 ---
 
+## Getting Started
+
+### Prerequisites
+
+Ensure the following tools are installed on your system:
+
+- **Docker**: [Install Docker](https://docs.docker.com/get-docker/)
+- **Docker Compose**: [Install Docker Compose](https://docs.docker.com/compose/install/)
+- 
+### Clone Repos
+
+```bash
+mkdir theniknakcollective
+cd theniknakcollective
+git clone https://github.com/TheNikNakCollective/NikNakLocalStack.git
+git clone https://github.com/TheNikNakCollective/NikNakAirflow.git
+git clone https://github.com/TheNikNakCollective/NikNakPackages.git
+git clone https://github.com/TheNikNakCollective/NikNakApp.git
+```
+### Setup Airflow
+
+```bash
+cd NikNakAirflow
+make setup
+```
+
+### Setup LocalStack
+
+```bash
+cd NikNakLocalStack
+make setup
+make niknak
+```
+
+### Setup Packages
+
+```bash
+cd NikNakPackages
+yarn install
+```
+
 ## 🛡 License
 
 The NikNak Collective is licensed under the [GPL-3.0 License](LICENSE), ensuring that the platform remains free and open for all users, with contributions shared under the same terms.
